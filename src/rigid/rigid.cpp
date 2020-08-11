@@ -57,7 +57,7 @@ bool Rigid::isCollidingRight(){
 
 
 bool Rigid::isCollidingLeft(){
-	// TODO: Colliding left is not working
+	// TODO(#3): Colliding left is not working
 	for(int i = 0; i < rigidObjects.size(); i++){
 		// Check if other object is left of our sprite
 		if(rigidObjects[i].rect.x < rect.x){
