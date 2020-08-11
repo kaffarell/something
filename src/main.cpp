@@ -1,7 +1,7 @@
 #include "SDL.h"
 #include <iostream>
-#include "rigid.hpp"
-#include "helper.hpp"
+#include "rigid/rigid.hpp"
+#include "helper/helper.hpp"
 #include <math.h>
 
 #define WINDOW_HEIGHT 900

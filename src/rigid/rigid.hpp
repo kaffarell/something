@@ -3,7 +3,7 @@
 
 
 #include "SDL.h"
-#include "sprite.hpp"
+#include "../sprite/sprite.hpp"
 #include <vector>
 
 class Rigid: public Sprite{
