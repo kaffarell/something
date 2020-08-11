@@ -30,6 +30,7 @@ bool Rigid::isCollidingTop(){
 
 
 bool Rigid::isCollidingBottom(){
+	// TODO(#2): Colliding Bottom changes when jumping often
 	for(int i = 0; i < rigidObjects.size(); i++){
 		// Check if other object is above our sprite
 		if(rigidObjects[i].rect.y > rect.y){
@@ -56,6 +57,7 @@ bool Rigid::isCollidingRight(){
 
 
 bool Rigid::isCollidingLeft(){
+	// TODO: Colliding left is not working
 	for(int i = 0; i < rigidObjects.size(); i++){
 		// Check if other object is left of our sprite
 		if(rigidObjects[i].rect.x < rect.x){
