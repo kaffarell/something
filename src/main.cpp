@@ -78,7 +78,7 @@ int main(){
                 }
             }
 		}
-
+		// TODO(#4): Check for isColldingTop to disble jumping when something is overhead
         if(jumping == true){
 			if(spriteY < jumpingOffset) {
 				jumping = false;
