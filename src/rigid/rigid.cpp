@@ -34,7 +34,7 @@ bool Rigid::isCollidingBottom(){
 	for(int i = 0; i < rigidObjects.size(); i++){
 		// Check if other object is above our sprite
 		if(rigidObjects[i].rect.y > rect.y){
-			if(rect.y + rect.h >= rigidObjects[i].rect.y){
+			if(rect.y + rect.h > rigidObjects[i].rect.y){
 				return true;
 			}
 		}
@@ -47,7 +47,7 @@ bool Rigid::isCollidingRight(){
 	for(int i = 0; i < rigidObjects.size(); i++){
 		// Check if other object is right of our sprite
 		if(rigidObjects[i].rect.x > rect.x){
-			if(rect.x + rect.w >= rigidObjects[i].rect.x){
+			if(rect.x + rect.w >= rigidObjects[i].rect.x && (isCollidingBottom() == true && isCollidingTop() == true)){
 				return true;
 			}
 		}
@@ -57,11 +57,10 @@ bool Rigid::isCollidingRight(){
 
 
 bool Rigid::isCollidingLeft(){
-	// TODO(#3): Colliding left is not working
 	for(int i = 0; i < rigidObjects.size(); i++){
 		// Check if other object is left of our sprite
 		if(rigidObjects[i].rect.x < rect.x){
-			if(rect.x <= rigidObjects[i].rect.x + rigidObjects[i].rect.w){
+			if(rect.x <= rigidObjects[i].rect.x + rigidObjects[i].rect.w && (isCollidingBottom() == true && isCollidingTop() == true)){
 				return true;
 			}
 		}
